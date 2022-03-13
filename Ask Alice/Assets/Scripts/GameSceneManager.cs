@@ -24,9 +24,6 @@ public class GameSceneManager : MonoBehaviour
     }
 
 
-
-
-
     public void LoadScene(string sceneName)
     {
         StartCoroutine(LoadNewScene(sceneName));
