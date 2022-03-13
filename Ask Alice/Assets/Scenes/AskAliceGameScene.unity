@@ -518,10 +518,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   allButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1955000440}
+  - {fileID: 1812777102}
+  - {fileID: 1174425313}
+  - {fileID: 1033927162}
 --- !u!4 &364661521
 Transform:
   m_ObjectHideFlags: 0
@@ -979,6 +979,7 @@ GameObject:
   - component: {fileID: 1033927159}
   - component: {fileID: 1033927158}
   - component: {fileID: 1033927161}
+  - component: {fileID: 1033927162}
   m_Layer: 0
   m_Name: pocketWatch_Button
   m_TagString: Untagged
@@ -1195,6 +1196,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1033927162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033927156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
+  button: {fileID: 1033927158}
 --- !u!1 &1045959729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1476,6 +1491,7 @@ GameObject:
   - component: {fileID: 1174425310}
   - component: {fileID: 1174425309}
   - component: {fileID: 1174425312}
+  - component: {fileID: 1174425313}
   m_Layer: 0
   m_Name: Button_Lock
   m_TagString: Untagged
@@ -1692,6 +1708,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1174425313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174425307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
+  button: {fileID: 1174425309}
 --- !u!1 &1317008746
 GameObject:
   m_ObjectHideFlags: 0
@@ -2292,6 +2322,7 @@ GameObject:
   - component: {fileID: 1812777099}
   - component: {fileID: 1812777098}
   - component: {fileID: 1812777101}
+  - component: {fileID: 1812777102}
   m_Layer: 0
   m_Name: Right_Hearts_Teacup_Button
   m_TagString: Untagged
@@ -2508,6 +2539,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1812777102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812777096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedColor: {r: 0.30900678, g: 0.754717, b: 0.534627, a: 0}
+  button: {fileID: 1812777098}
 --- !u!1 &1955000434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2521,6 +2566,7 @@ GameObject:
   - component: {fileID: 1955000437}
   - component: {fileID: 1955000436}
   - component: {fileID: 1955000439}
+  - component: {fileID: 1955000440}
   m_Layer: 0
   m_Name: tophat_Button
   m_TagString: Untagged
@@ -2737,6 +2783,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1955000440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955000434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
+  button: {fileID: 1955000436}
 --- !u!1 &2145166795
 GameObject:
   m_ObjectHideFlags: 0
