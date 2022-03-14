@@ -39,7 +39,7 @@ public class AskAliceManager : MonoBehaviour
         for(int i=0; i<numberOfPresses; i++)
         {
             //select random int within range to select random button
-            int randomButton = Random.Range(0, allButtons.Count - 1);
+            int randomButton = Random.Range(0, allButtons.Count);
             
             allButtons[randomButton].SelectButton();
            
