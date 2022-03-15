@@ -4,7 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Round3Manager : MonoBehaviour
-{
+{//Round three will have 6 buttons and 8 button presses
+ //round 3 mini boss is The Queen of Hearts Shadow if player wins he is defeated else player takes damage, lose three times and its game over
+   
+    public bool playerwins; //boolean to determine if player won
+    public int QueenHealth = 2; //shade of the Queen of Hearts health
+    public int playerHealth = 3;  //player health
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
     private List<Button> GameButtonsPressed = new List<Button>();
     private List<Button> playerButtonsPressed = new List<Button>();

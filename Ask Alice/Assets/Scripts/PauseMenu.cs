@@ -14,9 +14,10 @@ public class PauseMenu : MonoBehaviour
     public GameObject PauseMenuOnOff;
     public static bool isPaused = false;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        PauseMenuOnOff.SetActive(false);
+        isPaused = false;
     }
 
     // Update is called once per frame

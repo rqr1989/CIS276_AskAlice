@@ -2,9 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+//2nd round should have 5 potential buttons and 6 button presses
+//round 2 mini boss is mad hatter, if player wins he is defeated else player takes damage, lose three times and its game over
 public class Round2 : MonoBehaviour
 {
+    public bool playerwins; //boolean to determine if player won
+      public int MHhealth = 1; //Mad Hatter Health
+    public int playerHealth = 3;  //player health
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
     private List<Button> GameButtonsPressed = new List<Button>();
     private List<Button> playerButtonsPressed = new List<Button>();

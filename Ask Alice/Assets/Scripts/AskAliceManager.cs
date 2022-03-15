@@ -5,7 +5,13 @@ using UnityEngine.UI;
 
 public class AskAliceManager : MonoBehaviour
 {
+    //round 1 mini boss is white rabbit, if player wins he is defeated els player takes damage, lose three times and its game over
 
+    public bool playerwins; //boolean to determine if player won
+    public int WRhealth = 1;  //white Rabit Health
+    public int MHhealth = 1; //Mad Hatter Health
+    public int QueenHealth = 2; //shade of the Queen of Hearts health
+    public int playerHealth = 3;  //player health
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
     private  List<Button> GameButtonsPressed = new List<Button>();
     private List<Button> playerButtonsPressed = new List<Button>();
@@ -22,6 +28,8 @@ public class AskAliceManager : MonoBehaviour
     {
         //starts PressButtons corutine
         StartCoroutine(PressButtons());
+
+        StartCoroutine(PlayerPresses());
     }
 
     IEnumerator PressButtons()
@@ -62,15 +70,34 @@ public class AskAliceManager : MonoBehaviour
         //reeneable buttons
         canvas.GetComponent<GraphicRaycaster>().enabled = true;
     }
+
+    IEnumerator PlayerPresses()
+    {
+        //check the button pressed by player matches button
+
+        //at equivilent index in GamesButtonsPressed list
+
+
+        for (int i = 0; i < GameButtonsPressed.Count; i++)
+        {
+
+        }
+            //find canvas in scene
+            Canvas canvas = FindObjectOfType<Canvas>();
+        //disables buttond for player input
+        canvas.GetComponent<GraphicRaycaster>().enabled = false;
+        for (int i =0; i<allButtons.Count; i++)
+        {
+
+            //select random int within range to select random button
+           //  int buttonCheck;
+
+          
+            //wait 1 second
+            yield return new WaitForSeconds(1f);
+        }
+    }
 }
-//check the button pressed by player matches button
-//at equivilent index in GamesButtonsPressed list
+
 // if player wins start new round
 //else player must retry or give up
-//round 1 mini boss is white rabbit, if player wins he is defeated els player takes damage, lose three times and its game over
-
-//2nd round should have 6 potential buttons and 6 button presses
-//round 2 mini boss is mad hatter, if player wins he is defeated else player takes damage, lose three times and its game over
-
-//Round three will have 8 buttons and 8 button presses
-//round 3 mini boss is The Queen of Hearts Shadow if player wins he is defeated else player takes damage, lose three times and its game over
