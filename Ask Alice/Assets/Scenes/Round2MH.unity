@@ -388,7 +388,7 @@ GameObject:
   - component: {fileID: 117984398}
   - component: {fileID: 117984397}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -410,6 +410,7 @@ MonoBehaviour:
   exitButton: {fileID: 1766006510}
   resume: {fileID: 390673300}
   restart: {fileID: 1747046707}
+  thisGameSceneName: Round2MH
   gameSceneName: MainMenu
   PauseMenuOnOff: {fileID: 1677297477}
 --- !u!224 &117984398
@@ -1402,7 +1403,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Restart Game
+  m_text: Restart Round
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2096,7 +2097,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0.5
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2111,8 +2112,8 @@ Canvas:
   m_GameObject: {fileID: 1150873740}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 36544219}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2674,6 +2675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd53ba70b9dab354c8bfe5bb5b2c307c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameSceneName: 
+  MainMenu: 
   playerwins: 0
   WRhealth: 1
   MHhealth: 1

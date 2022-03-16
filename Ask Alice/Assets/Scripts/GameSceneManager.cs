@@ -28,7 +28,7 @@ public class GameSceneManager : MonoBehaviour
     {
         StartCoroutine(LoadNewScene(sceneName));
     }
-    // SpaceShooterScene
+    // 
     private IEnumerator LoadNewScene(string sceneName)
     {
         yield return null;

@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public Button exitButton;
     public Button resume;
     public Button restart;
+    public string thisGameSceneName;
     public string gameSceneName;
     //public Button pause;
     public GameObject PauseMenuOnOff;
@@ -23,14 +24,17 @@ public class PauseMenu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if the Escape key is pressed
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
             {
+                //calls the resumeGame method
                 ResumeGame();
             }
             else
             {
+                //calls the Pause Game Method
                 PauseGame();
             }
         }
@@ -39,7 +43,7 @@ public class PauseMenu : MonoBehaviour
     }
     void PauseGame()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0; //pause time in the game
         PauseMenuOnOff.SetActive(true);
         isPaused = true;
 
@@ -50,24 +54,37 @@ public class PauseMenu : MonoBehaviour
 
 
     }
+    //resumeGame method
     void ResumeGame()
     {
-        Time.timeScale = 1;
-        PauseMenuOnOff.SetActive(false);
-        isPaused = false;
+        Time.timeScale = 1; //unpause the game
+        PauseMenuOnOff.SetActive(false); //
+        isPaused = false; //set boolean to false
     }
-    //add logic to restart  current round
+    
     void RestartRound()
-    {
-
+    {//calls reload game scene method
+        
+        
+        ReLoadGameScene();
+        
     }
     public void LoadGameScene()
     {
-
+        //loads the main menu
         GameSceneManager.Instance.LoadScene(gameSceneName);
+    }
+
+    public void ReLoadGameScene()
+    {
+        //re loads the scene
+        GameSceneManager.Instance.LoadScene(thisGameSceneName);
+        //turns off pause menu
+        ResumeGame();
     }
     private void OnApplicationQuit()
     {
+        //quit application
         Application.Quit();
     }
 }
