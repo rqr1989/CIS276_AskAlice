@@ -6,12 +6,17 @@ using UnityEngine.UI;
 //round 2 mini boss is mad hatter, if player wins he is defeated else player takes damage, lose three times and its game over
 public class Round2 : MonoBehaviour
 {
+    public string gameSceneName;
+    public string MainMenu;
+
     public bool playerwins; //boolean to determine if player won
-      public int MHhealth = 1; //Mad Hatter Health
+    public int MHhealth = 1; //Mad Hatter Health
     public int playerHealth = 3;  //player health
+
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
     private List<Button> GameButtonsPressed = new List<Button>();
     private List<Button> playerButtonsPressed = new List<Button>();
+
     private int numberOfPresses = 6;
     private int buttonCheck = 0;
     // Start is called before the first frame update
@@ -65,4 +70,71 @@ public class Round2 : MonoBehaviour
         //reeneable buttons
         canvas.GetComponent<GraphicRaycaster>().enabled = true;
     }
-}
+
+
+    public void PlayerInput()
+    {
+        for (int i = 0; i < numberOfPresses; i++)
+        {
+            // if ( button is pressed 
+            //Add to list playerButtonsPressed
+
+        }
+
+        //check that button pressed at each index matches button at the same index in the Game ButtonsPressed list
+        for (int I = 0; I < GameButtonsPressed.Count; I++)
+        {
+            if (playerButtonsPressed[I] = GameButtonsPressed[I])
+            {
+                playerwins = true;
+
+                winCondition();
+            }
+            else
+            {
+                playerwins = false;
+                winCondition();
+            }   
+            }
+        }
+    
+        //winCondition method checks whether the player has won or lost
+        // if player wins start new round
+        //else player loses 1 health
+        public void winCondition()
+        {
+            //if the player wins
+            if (playerwins == true)
+            {
+                //load the next scene
+                LoadGameScene();
+            }
+            //if playerwins is equal to false
+            else if (playerwins == false)
+            {
+                //subtract 1 from player health
+                playerHealth -= 1;
+                //if player health is less than or equal to 0
+                if (playerHealth <= 0)
+                {
+                    //prints Game Over Meassage in the console
+                    Debug.Log("Game Over");
+
+                    //calls LoadMain Menu
+                    LoadMainMenu();
+                }
+            }
+        }
+        // LoadGameScene method
+        public void LoadGameScene()
+        {
+
+            GameSceneManager.Instance.LoadScene(gameSceneName);
+        }
+        // LoadMainMenu method
+        public void LoadMainMenu()
+        {
+
+            GameSceneManager.Instance.LoadScene(MainMenu);
+        }
+    }
