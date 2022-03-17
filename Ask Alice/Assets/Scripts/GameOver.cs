@@ -38,8 +38,6 @@ public class GameOver : MonoBehaviour
 
         mainMenu.onClick.AddListener(LoadGameScene);
         exitButton.onClick.AddListener(OnApplicationQuit);
-       
-
 
     }
   

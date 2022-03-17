@@ -76,17 +76,12 @@ public class AskAliceManager : MonoBehaviour
 
     IEnumerator PlayerPresses()
     {
-        //check the button pressed by player matches button
-
-        //at equivilent index in GamesButtonsPressed list
-
-
         for (int i = 0; i < GameButtonsPressed.Count; i++)
         {
-            
-            
+            //Need Logic Here To Add Buttons Pressed to playerButtonsPressed
+
             //if the player has pressed 4 buttons
-            if(playerpresses >= numberOfPresses)
+            if (playerpresses >= numberOfPresses)
             {
                 //find canvas in scene
                 Canvas canvas = FindObjectOfType<Canvas>();
@@ -94,17 +89,40 @@ public class AskAliceManager : MonoBehaviour
                 canvas.GetComponent<GraphicRaycaster>().enabled = false;
             }
         }
-            
+
+        //wait 1 second
+        yield return new WaitForSeconds(1f);
+    }
+        public void CheckInput()
+        { 
+        //check the button pressed by player matches button
+        //at equivilent index in GamesButtonsPressed list
       
-        for (int i =0; i<allButtons.Count; i++)
+        //the lists do not have the same number of entries
+            if(GameButtonsPressed.Count != playerButtonsPressed.Count)
         {
-
-           
-           //  int buttonCheck;
-
-          
-            //wait 1 second
-            yield return new WaitForSeconds(1f);
+            //playerwins is set to false
+            playerwins = false;
+            //calls winCondition
+            winCondition();
+        }
+            //else
+        else
+        {
+            //Sort both lists
+            GameButtonsPressed.Sort();
+            playerButtonsPressed.Sort();
+        }
+      //Go through lists and determine if buttons pressed at each index are the same
+        for (int i =0; i<GameButtonsPressed.Count; i++)
+        {
+            if(playerButtonsPressed[i] != GameButtonsPressed[i])
+            {
+                //playerwins is set to false
+                playerwins = false;
+                //calls winCondition
+                winCondition();
+            }
         }
     }
     //winCondition method checks whether the player has won or lost

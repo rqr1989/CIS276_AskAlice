@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
 //2nd round should have 5 potential buttons and 6 button presses
 //round 2 mini boss is mad hatter, if player wins he is defeated else player takes damage, lose three times and its game over
 public class Round2 : MonoBehaviour
@@ -19,6 +20,13 @@ public class Round2 : MonoBehaviour
 
     private int numberOfPresses = 6;
     private int buttonCheck = 0;
+
+    public Button lockAndKey;
+    public Button pocketWatch;
+    public Button topHat;
+    public Button rightTeaCup;
+    public Button cheshire;
+
     // Start is called before the first frame update
     public void Start()
     {
@@ -78,21 +86,25 @@ public class Round2 : MonoBehaviour
         {
             // if ( button is pressed 
             //Add to list playerButtonsPressed
-
+          //  if ()
         }
 
         //check that button pressed at each index matches button at the same index in the Game ButtonsPressed list
         for (int I = 0; I < GameButtonsPressed.Count; I++)
         {
-            if (playerButtonsPressed[I] = GameButtonsPressed[I])
+            //if playerButtonPressed at index I does not match GameButtonsPressed at index I
+            if (playerButtonsPressed[I] != GameButtonsPressed[I])
             {
-                playerwins = true;
-
-                winCondition();
+                //palyerwins is set to false
+                playerwins = false;
+               
+                //calls winCondition
+                winCondition();      
             }
             else
-            {
-                playerwins = false;
+           {
+                playerwins = true;
+
                 winCondition();
             }   
             }
@@ -121,7 +133,7 @@ public class Round2 : MonoBehaviour
                     Debug.Log("Game Over");
 
                     //calls LoadMain Menu
-                    LoadMainMenu();
+                    //LoadMainMenu();
                 }
             }
         }
@@ -137,4 +149,6 @@ public class Round2 : MonoBehaviour
 
             GameSceneManager.Instance.LoadScene(MainMenu);
         }
-    }
+   
+
+}
