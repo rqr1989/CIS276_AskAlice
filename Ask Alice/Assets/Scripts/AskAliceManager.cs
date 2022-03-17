@@ -20,6 +20,8 @@ public class AskAliceManager : MonoBehaviour
     private int numberOfPresses = 4;
     private int buttonCheck = 0;
     int playerpresses = 0;
+    int currentRound = 1;
+    public float time = 1f;
     // Start is called before the first frame update
  public  void Start()
     {
@@ -133,8 +135,23 @@ public class AskAliceManager : MonoBehaviour
         //if the player wins
         if(playerwins == true)
         {
-            //load the next scene
-            LoadGameScene();
+            currentRound += 1;
+           
+            if(currentRound == 2)
+            {
+                Invoke("Round2",time);
+            }
+             else if(currentRound == 3)
+            {
+                Invoke("Round3",time);
+            }
+            else if (currentRound==4)
+            {
+                //load the next scene
+                 LoadGameScene();
+            }
+
+
         }
         //if playerwins is equal to false
         else if (playerwins == false)
