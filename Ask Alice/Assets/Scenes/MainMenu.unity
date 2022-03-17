@@ -635,7 +635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startButton: {fileID: 1698583927}
   exitButton: {fileID: 1453657736}
-  gameSceneName: AskAliceGameScene
+  gameSceneName: OpeningScene
 --- !u!1 &678899706
 GameObject:
   m_ObjectHideFlags: 0

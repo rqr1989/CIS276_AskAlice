@@ -9,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     public Button exitButton;
     public Button resume;
     public Button restart;
-    public string thisGameSceneName;
+    public string firstGameSceneName;
     public string gameSceneName;
     //public Button pause;
     public GameObject PauseMenuOnOff;
@@ -66,7 +66,7 @@ public class PauseMenu : MonoBehaviour
     {//calls reload game scene method
         
         
-        ReLoadGameScene();
+        ReLoadGame();
         
     }
     public void LoadGameScene()
@@ -75,10 +75,10 @@ public class PauseMenu : MonoBehaviour
         GameSceneManager.Instance.LoadScene(gameSceneName);
     }
 
-    public void ReLoadGameScene()
+    public void ReLoadGame()
     {
         //re loads the scene
-        GameSceneManager.Instance.LoadScene(thisGameSceneName);
+        GameSceneManager.Instance.LoadScene(firstGameSceneName);
         //turns off pause menu
         ResumeGame();
     }

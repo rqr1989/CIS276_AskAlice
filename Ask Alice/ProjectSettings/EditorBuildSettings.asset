@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Round2MH.unity
     guid: 5c59a5f9a6f2e754ba8a634e5a8c3929
+  - enabled: 1
+    path: Assets/Scenes/OpeningScene.unity
+    guid: 021e7069b62984a4b9400ae54eef2642
   m_configObjects: {}
