@@ -11,16 +11,15 @@ public class AskAliceManager : MonoBehaviour
     public string MainMenu;
     public bool playerwins; //boolean to determine if player won
 
-    public int WRhealth = 1;  //white Rabit Health
-    public int MHhealth = 1; //Mad Hatter Health
-    public int QueenHealth = 2; //shade of the Queen of Hearts health
+    public int enemyHealth = 3;  //white Rabit Health
+   
     public int playerHealth = 3;  //player health
 
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
     private  List<Button> GameButtonsPressed = new List<Button>();
     private List<Button> playerButtonsPressed = new List<Button>();
 
-    private int numberOfPresses = 4;
+    private int numberOfPresses = 3;
     int playerpresses = 0;
     int currentRound = 1;
     public float time = 1f;
@@ -140,15 +139,26 @@ public class AskAliceManager : MonoBehaviour
         //if the player wins
         if(playerwins == true)
         {
+            //add 1 to currentRound
             currentRound += 1;
-           
+            //subtract 1 from enemy health
+            enemyHealth -= 1;
             if(currentRound == 2)
-            {
+            {//calls Round2 method from Roubd Indicator class
                 Invoke("Round2",time);
+                //sets number pf presses to 4
+                numberOfPresses = 4;
+               //calls start round method
+                StartRound();
             }
              else if(currentRound == 3)
             {
+                //calls Round3 method from roundIndicator class
                 Invoke("Round3",time);
+                //ups number of pressed to 5
+                numberOfPresses = 5;
+                //calls startRound method
+                StartRound();
             }
             else if (currentRound==4)
             {
@@ -175,7 +185,9 @@ public class AskAliceManager : MonoBehaviour
                 //calls LoadMain Menu
                 LoadMainMenu();
             }
+        
         }
+
     }
     // LoadGameScene method
     public void LoadGameScene()

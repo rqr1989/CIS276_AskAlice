@@ -8,17 +8,22 @@ public class Level3Manager : MonoBehaviour
  //round 3 mini boss is The Queen of Hearts Shadow if player wins he is defeated else player takes damage, lose three times and its game over
     public string gameSceneName;
     public string MainMenu;
+
     public bool playerwins; //boolean to determine if player won
     public int QueenHealth = 2; //shade of the Queen of Hearts health
     public int playerHealth = 3;  //player health
+
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
     private List<Button> GameButtonsPressed = new List<Button>();
     private List<Button> playerButtonsPressed = new List<Button>();
+
     private int numberOfPresses = 8;
     private int buttonCheck = 0;
+   
     int playerpresses = 0;
     int currentRound = 1;
     public float time = 1f;
+    public int enemyHealth = 3;
     // Start is called before the first frame update
     public void Start()
     {
@@ -130,7 +135,7 @@ public class Level3Manager : MonoBehaviour
         if (playerwins == true)
         {
             currentRound += 1;
-
+            enemyHealth -= 1;
             if (currentRound == 2)
             {
                 Invoke("Round2", time);
@@ -160,8 +165,6 @@ public class Level3Manager : MonoBehaviour
                 //prints Game Over Meassage in the console
                 Debug.Log("Game Over");
 
-                //calls LoadMain Menu
-                LoadMainMenu();
             }
         }
     }

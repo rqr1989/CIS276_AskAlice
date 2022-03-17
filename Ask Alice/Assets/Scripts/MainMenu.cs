@@ -16,6 +16,7 @@ public class MainMenu : MonoBehaviour
 
         exitButton.onClick.AddListener(OnApplicationQuit);
 
+       
     }
     private void OnApplicationQuit()
     {

@@ -13,7 +13,7 @@ public class Level2Manager : MonoBehaviour
     public bool playerwins; //boolean to determine if player won
     public int MHhealth = 1; //Mad Hatter Health
     public int playerHealth = 3;  //player health
-
+    public int enemyHealth = 3;
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
     private List<Button> GameButtonsPressed = new List<Button>();
     private List<Button> playerButtonsPressed = new List<Button>();
@@ -142,6 +142,7 @@ public class Level2Manager : MonoBehaviour
         {
             currentRound += 1;
 
+              enemyHealth -=1;
             if (currentRound == 2)
             {
                 Invoke("Round2", time);
@@ -168,9 +169,6 @@ public class Level2Manager : MonoBehaviour
 
                     //prints Game Over Meassage in the console
                     Debug.Log("Game Over");
-
-                    //calls LoadMain Menu
-                    LoadMainMenu();
                 }
             }
         }
