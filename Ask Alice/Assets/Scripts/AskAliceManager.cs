@@ -10,15 +10,17 @@ public class AskAliceManager : MonoBehaviour
     public string gameSceneName;
     public string MainMenu;
     public bool playerwins; //boolean to determine if player won
+
     public int WRhealth = 1;  //white Rabit Health
     public int MHhealth = 1; //Mad Hatter Health
     public int QueenHealth = 2; //shade of the Queen of Hearts health
     public int playerHealth = 3;  //player health
+
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
     private  List<Button> GameButtonsPressed = new List<Button>();
     private List<Button> playerButtonsPressed = new List<Button>();
+
     private int numberOfPresses = 4;
-    private int buttonCheck = 0;
     int playerpresses = 0;
     int currentRound = 1;
     public float time = 1f;
@@ -82,8 +84,11 @@ public class AskAliceManager : MonoBehaviour
         {
             //Need Logic Here To Add Buttons Pressed to playerButtonsPressed
 
+            
+
+
             //if the player has pressed 4 buttons
-            if (playerpresses >= numberOfPresses)
+            if (playerpresses == numberOfPresses)
             {
                 //find canvas in scene
                 Canvas canvas = FindObjectOfType<Canvas>();
@@ -161,6 +166,9 @@ public class AskAliceManager : MonoBehaviour
             //if player health is less than or equal to 0
             if(playerHealth <= 0)
             {
+                //turn on game over menu
+                Invoke("TurnOnGameOver", time);
+
                 //prints Game Over Meassage in the console
                 Debug.Log("Game Over");
                 

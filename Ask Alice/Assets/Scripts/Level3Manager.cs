@@ -146,6 +146,24 @@ public class Level3Manager : MonoBehaviour
             }
 
         }
+        //if playerwins is equal to false
+        else if (playerwins == false)
+        {
+            //subtract 1 from player health
+            playerHealth -= 1;
+            //if player health is less than or equal to 0
+            if (playerHealth <= 0)
+            {
+                //turn on game over menu
+                Invoke("TurnOnGameOver", time);
+
+                //prints Game Over Meassage in the console
+                Debug.Log("Game Over");
+
+                //calls LoadMain Menu
+                LoadMainMenu();
+            }
+        }
     }
     // LoadGameScene method
     public void LoadGameScene()

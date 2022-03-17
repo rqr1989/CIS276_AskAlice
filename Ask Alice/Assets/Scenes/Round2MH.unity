@@ -177,15 +177,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af6830d620917294d8e340b4e269a7df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Round1Panel: {fileID: 0}
-  Round2Panel: {fileID: 0}
-  Round3Panel: {fileID: 0}
+  Round1Panel: {fileID: 233662232}
+  Round2Panel: {fileID: 1530567246}
+  Round3Panel: {fileID: 465574713}
   isRound1: 1
   isRound2: 0
   isRound3: 0
-  round1: {fileID: 233662232}
-  round2: {fileID: 1530567246}
-  round3: {fileID: 465574713}
+  round1: {fileID: 29748143}
+  round2: {fileID: 1165905403}
+  round3: {fileID: 1848813966}
 --- !u!114 &16107539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,6 +347,11 @@ PrefabInstance:
 --- !u!224 &29748142 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8957191135613566034, guid: 57c24c1fc3e29424bac93f3eeed6040f, type: 3}
+  m_PrefabInstance: {fileID: 29748141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &29748143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5765062264008101123, guid: 57c24c1fc3e29424bac93f3eeed6040f, type: 3}
   m_PrefabInstance: {fileID: 29748141}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &31518249
@@ -4102,7 +4107,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1690439308}
-  - component: {fileID: 1690439307}
   - component: {fileID: 1690439306}
   m_Layer: 0
   m_Name: AskAliceManager
@@ -4123,8 +4127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fcad992ed60acb43b3e0cfcc420fe5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameSceneName: 
-  MainMenu: 
+  gameSceneName: Round3_QueenOfHearts
+  MainMenu: MainMenu
   playerwins: 0
   MHhealth: 1
   playerHealth: 3
@@ -4139,31 +4143,6 @@ MonoBehaviour:
   topHat: {fileID: 0}
   rightTeaCup: {fileID: 0}
   cheshire: {fileID: 0}
-  time: 1
---- !u!114 &1690439307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1690439305}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd53ba70b9dab354c8bfe5bb5b2c307c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameSceneName: Round3_QueenOfHearts
-  MainMenu: MainMenu
-  playerwins: 0
-  WRhealth: 1
-  MHhealth: 1
-  QueenHealth: 2
-  playerHealth: 3
-  allButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   time: 1
 --- !u!4 &1690439308
 Transform:
