@@ -19,6 +19,11 @@ public class AskAliceManager : MonoBehaviour
     private  List<Button> GameButtonsPressed = new List<Button>();
     private List<Button> playerButtonsPressed = new List<Button>();
 
+    public Button tophat;
+    public Button rightTeaCup;
+    public Button pocketWatch;
+    public Button lockAndKey;
+
     private int numberOfPresses = 3;
     int playerpresses = 0;
     int currentRound = 1;
@@ -34,8 +39,10 @@ public class AskAliceManager : MonoBehaviour
     {
         //starts PressButtons corutine
         StartCoroutine(PressButtons());
-
+        //starts playerPresses corutine
         StartCoroutine(PlayerPresses());
+        //calls CheckInput method
+        CheckInput();
     }
 
     IEnumerator PressButtons()
@@ -84,6 +91,7 @@ public class AskAliceManager : MonoBehaviour
             //Need Logic Here To Add Buttons Pressed to playerButtonsPressed
 
             
+      //if( Button.ButtonClickedEvent)
 
 
             //if the player has pressed 4 buttons
@@ -98,6 +106,10 @@ public class AskAliceManager : MonoBehaviour
 
         //wait 1 second
         yield return new WaitForSeconds(1f);
+    }
+    public void addButtonPressed()
+    {
+
     }
         public void CheckInput()
         { 
@@ -147,7 +159,7 @@ public class AskAliceManager : MonoBehaviour
             {//calls Round2 method from Roubd Indicator class
                 Invoke("Round2",time);
                 //sets number pf presses to 4
-                numberOfPresses = 4;
+                numberOfPresses += 1;
                //calls start round method
                 StartRound();
             }
@@ -156,7 +168,7 @@ public class AskAliceManager : MonoBehaviour
                 //calls Round3 method from roundIndicator class
                 Invoke("Round3",time);
                 //ups number of pressed to 5
-                numberOfPresses = 5;
+                numberOfPresses += 1;
                 //calls startRound method
                 StartRound();
             }

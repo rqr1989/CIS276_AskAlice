@@ -39,6 +39,11 @@ public class Level2Manager : MonoBehaviour
     {
         //starts PressButtons corutine
         StartCoroutine(PressButtons());
+
+        //starts playerPresses corutine
+        StartCoroutine(PlayerPresses());
+        //calls CheckInput method
+        CheckInput();
     }
 
     IEnumerator PressButtons()
@@ -143,13 +148,20 @@ public class Level2Manager : MonoBehaviour
             currentRound += 1;
 
               enemyHealth -=1;
+
+            numberOfPresses += 1;
+          
             if (currentRound == 2)
             {
                 Invoke("Round2", time);
+                //calls startRound method
+                StartRound();
             }
             else if (currentRound == 3)
             {
                 Invoke("Round3", time);
+                //calls startRound method
+                StartRound();
             }
             else if (currentRound == 4)
             {

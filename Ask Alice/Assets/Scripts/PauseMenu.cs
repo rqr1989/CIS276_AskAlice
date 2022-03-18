@@ -50,7 +50,7 @@ public class PauseMenu : MonoBehaviour
         mainMenu.onClick.AddListener(LoadGameScene);
         exitButton.onClick.AddListener(OnApplicationQuit);
         resume.onClick.AddListener(ResumeGame);
-        restart.onClick.AddListener(RestartRound);
+        restart.onClick.AddListener(ReStartGame);
 
 
     }
@@ -62,20 +62,14 @@ public class PauseMenu : MonoBehaviour
         isPaused = false; //set boolean to false
     }
     
-    void RestartRound()
-    {//calls reload game scene method
-        
-        
-        ReLoadGame();
-        
-    }
+  
     public void LoadGameScene()
     {
         //loads the main menu
         GameSceneManager.Instance.LoadScene(gameSceneName);
     }
 
-    public void ReLoadGame()
+    public void ReStartGame()
     {
         //re loads the scene
         GameSceneManager.Instance.LoadScene(firstGameSceneName);

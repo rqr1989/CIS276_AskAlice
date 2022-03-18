@@ -1107,15 +1107,17 @@ MonoBehaviour:
   gameSceneName: Round2MH
   MainMenu: MainMenu
   playerwins: 0
-  WRhealth: 1
-  MHhealth: 1
-  QueenHealth: 2
+  enemyHealth: 3
   playerHealth: 3
   allButtons:
   - {fileID: 1955000440}
   - {fileID: 1812777102}
   - {fileID: 1174425313}
   - {fileID: 1033927162}
+  tophat: {fileID: 0}
+  rightTeaCup: {fileID: 0}
+  pocketWatch: {fileID: 0}
+  lockAndKey: {fileID: 0}
   time: 1
 --- !u!4 &364661521
 Transform:
@@ -2370,7 +2372,7 @@ MonoBehaviour:
   exitButton: {fileID: 1772118550}
   resume: {fileID: 407625253}
   restart: {fileID: 129534456}
-  firstGameSceneName: 
+  firstGameSceneName: OpeningScene
   gameSceneName: MainMenu
   PauseMenuOnOff: {fileID: 1570293582}
 --- !u!1 &1019819826
@@ -3745,6 +3747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1348824157}
+  - component: {fileID: 1348824158}
   m_Layer: 0
   m_Name: Enemy_WhiteRabbit
   m_TagString: Untagged
@@ -3772,6 +3775,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1348824158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348824156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 064922a61e54bb344a1ed1b17790057d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1474756046
 GameObject:
   m_ObjectHideFlags: 0

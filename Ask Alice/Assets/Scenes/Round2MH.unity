@@ -672,7 +672,7 @@ MonoBehaviour:
   exitButton: {fileID: 1766006510}
   resume: {fileID: 390673300}
   restart: {fileID: 1747046707}
-  firstGameSceneName: 
+  firstGameSceneName: OpeningScene
   gameSceneName: MainMenu
   PauseMenuOnOff: {fileID: 1677297477}
 --- !u!224 &117984398
@@ -4132,6 +4132,7 @@ MonoBehaviour:
   playerwins: 0
   MHhealth: 1
   playerHealth: 3
+  enemyHealth: 3
   allButtons:
   - {fileID: 272638188}
   - {fileID: 1878715425}
