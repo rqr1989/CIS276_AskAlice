@@ -8,7 +8,9 @@ public class PauseMenu : MonoBehaviour
     public Button mainMenu;
     public Button exitButton;
     public Button resume;
-    public Button restart;
+    public Button restartLevel;
+    public Button restartGame;
+    public string thisGameSceneName;
     public string firstGameSceneName;
     public string gameSceneName;
     //public Button pause;
@@ -50,7 +52,7 @@ public class PauseMenu : MonoBehaviour
         mainMenu.onClick.AddListener(LoadGameScene);
         exitButton.onClick.AddListener(OnApplicationQuit);
         resume.onClick.AddListener(ResumeGame);
-        restart.onClick.AddListener(ReStartGame);
+        restartGame.onClick.AddListener(ReStartGame);
 
 
     }
@@ -73,8 +75,12 @@ public class PauseMenu : MonoBehaviour
     {
         //re loads the scene
         GameSceneManager.Instance.LoadScene(firstGameSceneName);
-        //turns off pause menu
-        ResumeGame();
+        Time.timeScale = 1;
+    }
+    public void ReStartLevel()
+    {
+        GameSceneManager.Instance.LoadScene(thisGameSceneName);
+        Time.timeScale = 1;
     }
     private void OnApplicationQuit()
     {

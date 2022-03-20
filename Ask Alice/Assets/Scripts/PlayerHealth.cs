@@ -9,7 +9,7 @@ public class PlayerHealth : MonoBehaviour
     public GameObject healthCard2;
     public GameObject healthCard1;
     public Color selectedColor;
-    private Color originalColor;
+  
 
     public Image health3;
     public Image health2;
@@ -22,15 +22,12 @@ public class PlayerHealth : MonoBehaviour
 
         health3 = GetComponent<Image>();
 
-        originalColor = health3.color;
 
         health2 = GetComponent<Image>();
 
-        originalColor = health2.color;
-
+    
         health1 = GetComponent<Image>();
-
-        originalColor = health1.color;
+       
     }
 
  

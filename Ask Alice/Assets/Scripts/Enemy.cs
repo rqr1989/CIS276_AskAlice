@@ -11,9 +11,8 @@ public class Enemy : MonoBehaviour
     public Color selectedColor;
     
     private Color originalColor;
-    public Image enemy;
-   
-    private Image enemyImage;
+    
+    public Image enemyImage;
 
     // Start is called before the first frame update
     void Awake()
@@ -23,7 +22,7 @@ public class Enemy : MonoBehaviour
         healthHeart1.SetActive(true);
         enemyImage = GetComponent<Image>();
 
-        originalColor = enemyImage.color;
+       // originalColor = enemyImage.color;
    
 
     }
