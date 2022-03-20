@@ -147,24 +147,29 @@ public class Level2Manager : MonoBehaviour
         {
             currentRound += 1;
 
-              enemyHealth -=1;
+            enemyHealth -= 1;
 
             numberOfPresses += 1;
-          
+
             if (currentRound == 2)
             {
+                Invoke("HealthToZero", time);
                 Invoke("Round2", time);
                 //calls startRound method
                 StartRound();
             }
             else if (currentRound == 3)
             {
+
+                Invoke("HealthToOne", time);
                 Invoke("Round3", time);
                 //calls startRound method
                 StartRound();
             }
             else if (currentRound == 4)
             {
+                Invoke("HealthToZero", time);
+
                 //load the next scene
                 LoadGameScene();
             }
@@ -173,9 +178,26 @@ public class Level2Manager : MonoBehaviour
             {
                 //subtract 1 from player health
                 playerHealth -= 1;
+
+                if (playerHealth == 2)
+                {
+                    Invoke("PlayerHealthToTwo", time);
+                    //calls startRound method
+                    StartRound();
+                }
+                else if (playerHealth == 1)
+                {
+                    Invoke("PlayerHealthToOne", time);
+
+            
+                    //calls startRound method
+                    StartRound();
+                }
                 //if player health is less than or equal to 0
                 if (playerHealth <= 0)
                 {
+                    Invoke("PlayerHealthToZero", time);
+
                     //turn on game over menu
                     Invoke("TurnOnGameOver", time);
 
@@ -184,7 +206,7 @@ public class Level2Manager : MonoBehaviour
                 }
             }
         }
-      }
+    }
         // LoadGameScene method
         public void LoadGameScene()
         {

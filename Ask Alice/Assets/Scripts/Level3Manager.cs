@@ -150,7 +150,7 @@ public class Level3Manager : MonoBehaviour
             }
             else if (currentRound == 3)
             {
-                Invoke("Round3",time);
+                Invoke("Round3", time);
                 numberOfPresses += 1;
                 //calls startRound method
                 StartRound();
@@ -167,14 +167,26 @@ public class Level3Manager : MonoBehaviour
         {
             //subtract 1 from player health
             playerHealth -= 1;
+
+            if (playerHealth == 2)
+            {
+                Invoke("PlayerHealthToTwo", time);
+            }
+            else if (playerHealth == 1)
+            {
+                Invoke("PlayerHealthToOne", time);
+            }
             //if player health is less than or equal to 0
             if (playerHealth <= 0)
             {
+                Invoke("PlayerHealthToZero", time);
+
                 //turn on game over menu
                 Invoke("TurnOnGameOver", time);
 
                 //prints Game Over Meassage in the console
                 Debug.Log("Game Over");
+
 
             }
         }

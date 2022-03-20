@@ -19,9 +19,9 @@ MonoBehaviour:
     width: 1511.2001
     height: 758.4
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Project
   m_RootView: {fileID: 8}
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 0
 --- !u!114 &2
@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 0
     width: 836.00006
     height: 436.8
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 15}
@@ -73,10 +73,10 @@ MonoBehaviour:
     y: 30
     width: 1511.2
     height: 708.4
-  m_MinSize: {x: 578, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 579, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 1
-  controlID: 193
+  controlID: 156
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -98,10 +98,10 @@ MonoBehaviour:
     y: 0
     width: 1511.2
     height: 708.4
-  m_MinSize: {x: 578, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 579, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 194
+  controlID: 157
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,8 +147,8 @@ MonoBehaviour:
     y: 0
     width: 200.8
     height: 436.8
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -204,7 +204,7 @@ MonoBehaviour:
     y: 0
     width: 1511.2
     height: 758.4
-  m_MinSize: {x: 875, y: 542}
+  m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -280,7 +280,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 195
+  controlID: 158
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -305,7 +305,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 196
+  controlID: 197
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -695,13 +695,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\donto\OneDrive\Documents\GitHub\CIS276_AskAlice\Ask
     Alice
@@ -709,9 +709,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b6420000
-    m_LastClickedID: 17078
-    m_ExpandedIDs: 00000000b442000000ca9a3b
+    m_SelectedIDs: b8420000
+    m_LastClickedID: 17080
+    m_ExpandedIDs: 00000000b242000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -860,9 +860,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: e8120000
       m_LastClickedID: 0
-      m_ExpandedIDs: 8ccfffff38d4ffff3ad4ffff08d5ffff58d5ffffe2d6ffffb0d7ffffb4d9ffffa8daffff06dcffffeee1fffff0e1fffff2e1ffff56e2ffffa6eeffffb0eeffff42f4ffff3cf8ffffb6faffff124300002043000046430000e64300003e480000d8480000f848000002490000d44b0000744c0000dc4c000062550000f0550000fe550000fe590000c45a0000805d0000985d0000a25d0000ae5d00004e5e0000b65e0000f261000058660000866600004867000028680000e4680000fa680000886c0000
+      m_ExpandedIDs: b4faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -924,7 +924,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 525.9, y: 246.75, z: 0}
     speed: 2
-    m_Value: {x: 525.8999, y: 246.75005, z: 0.000043033215}
+    m_Value: {x: 525.9, y: 246.75, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -977,7 +977,7 @@ MonoBehaviour:
   m_Size:
     m_Target: 580.91
     speed: 2
-    m_Value: 580.9101
+    m_Value: 580.91
   m_Ortho:
     m_Target: 1
     speed: 2

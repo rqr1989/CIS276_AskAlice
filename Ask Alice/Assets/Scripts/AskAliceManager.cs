@@ -156,21 +156,23 @@ public class AskAliceManager : MonoBehaviour
             //subtract 1 from enemy health
             enemyHealth -= 1;
             if(currentRound == 2)
-
             {
                 //calls HealthToTwo method form Enemy class
-                Invoke("HealthToTwo", time);
+                Invoke("PlayerHealthToTwo", time);
+
                 //calls Round2 method from Roubd Indicator class
                 Invoke("Round2",time);
+
                 //sets number pf presses to 4
                 numberOfPresses += 1;
+
                //calls start round method
                 StartRound();
             }
              else if(currentRound == 3)
             {
 
-                Invoke("Hea")
+                Invoke("PlayerHealthToOne", time);
                 //calls Round3 method from roundIndicator class
                 Invoke("Round3",time);
                 //ups number of pressed to 5
@@ -180,8 +182,9 @@ public class AskAliceManager : MonoBehaviour
             }
             else if (currentRound==4)
             {
+                Invoke("PlayerHealthToZero", time);
                 //load the next scene
-                 LoadGameScene();
+                LoadGameScene();
             }
 
 
@@ -191,17 +194,27 @@ public class AskAliceManager : MonoBehaviour
         {
             //subtract 1 from player health
             playerHealth -= 1;
+
+            if(playerHealth == 2)
+            {
+                Invoke("PlayerHealthToTwo", time);
+            }
+            else if(playerHealth ==1)
+            {
+                Invoke("PlayerHealthToOne", time);
+            }
             //if player health is less than or equal to 0
             if(playerHealth <= 0)
             {
+                Invoke("PlayerHealthToZero", time);
+
                 //turn on game over menu
                 Invoke("TurnOnGameOver", time);
 
                 //prints Game Over Meassage in the console
                 Debug.Log("Game Over");
-                
-                //calls LoadMain Menu
-                LoadMainMenu();
+
+               
             }
         
         }
