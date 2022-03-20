@@ -156,7 +156,11 @@ public class AskAliceManager : MonoBehaviour
             //subtract 1 from enemy health
             enemyHealth -= 1;
             if(currentRound == 2)
-            {//calls Round2 method from Roubd Indicator class
+
+            {
+                //calls HealthToTwo method form Enemy class
+                Invoke("HealthToTwo", time);
+                //calls Round2 method from Roubd Indicator class
                 Invoke("Round2",time);
                 //sets number pf presses to 4
                 numberOfPresses += 1;
@@ -165,6 +169,8 @@ public class AskAliceManager : MonoBehaviour
             }
              else if(currentRound == 3)
             {
+
+                Invoke("Hea")
                 //calls Round3 method from roundIndicator class
                 Invoke("Round3",time);
                 //ups number of pressed to 5
