@@ -841,7 +841,7 @@ MonoBehaviour:
   healthHeart2: {fileID: 1030225018}
   healthHeart1: {fileID: 508377460}
   selectedColor: {r: 0.5529412, g: 0, b: 0, a: 0}
-  enemy: {fileID: 1019819828}
+  enemyImage: {fileID: 0}
 --- !u!1 &332794673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,10 +1151,10 @@ MonoBehaviour:
   - {fileID: 1812777102}
   - {fileID: 1174425313}
   - {fileID: 1033927162}
-  tophat: {fileID: 0}
-  rightTeaCup: {fileID: 0}
-  pocketWatch: {fileID: 0}
-  lockAndKey: {fileID: 0}
+  tophat: {fileID: 1955000436}
+  rightTeaCup: {fileID: 1812777098}
+  pocketWatch: {fileID: 1033927158}
+  lockAndKey: {fileID: 1174425309}
   time: 1
 --- !u!4 &364661521
 Transform:
@@ -2624,7 +2624,9 @@ MonoBehaviour:
   mainMenu: {fileID: 2145166797}
   exitButton: {fileID: 1772118550}
   resume: {fileID: 407625253}
-  restart: {fileID: 129534456}
+  restartLevel: {fileID: 0}
+  restartGame: {fileID: 0}
+  thisGameSceneName: 
   firstGameSceneName: OpeningScene
   gameSceneName: MainMenu
   PauseMenuOnOff: {fileID: 1570293582}
@@ -3631,7 +3633,7 @@ MonoBehaviour:
   healthHeart2: {fileID: 0}
   healthHeart1: {fileID: 0}
   selectedColor: {r: 0.17583047, g: 0, b: 0.5529412, a: 0}
-  enemy: {fileID: 0}
+  enemyImage: {fileID: 0}
 --- !u!114 &1138896250
 MonoBehaviour:
   m_ObjectHideFlags: 0

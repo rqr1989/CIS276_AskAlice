@@ -31,6 +31,7 @@ public class AskAliceManager : MonoBehaviour
     // Start is called before the first frame update
  public  void Start()
     {
+        
         //calls startRound method
         StartRound();
     }
@@ -83,13 +84,17 @@ public class AskAliceManager : MonoBehaviour
         //reeneable buttons
         canvas.GetComponent<GraphicRaycaster>().enabled = true;
     }
-
+    public void AddToList(Button b, int i)
+    { 
+        if(i < GameButtonsPressed.Count)
+        playerButtonsPressed.Add(b);
+    }
     IEnumerator PlayerPresses()
     {
         for (int i = 0; i < GameButtonsPressed.Count; i++)
         {
-            //Need Logic Here To Add Buttons Pressed to playerButtonsPressed
 
+          
             
       //if( Button.ButtonClickedEvent)
 
@@ -109,7 +114,7 @@ public class AskAliceManager : MonoBehaviour
     }
     public void addButtonPressed()
     {
-
+        
     }
         public void CheckInput()
         { 
