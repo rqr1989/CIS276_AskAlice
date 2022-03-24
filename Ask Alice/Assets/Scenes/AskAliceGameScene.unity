@@ -841,7 +841,7 @@ MonoBehaviour:
   healthHeart2: {fileID: 1030225018}
   healthHeart1: {fileID: 508377460}
   selectedColor: {r: 0.5529412, g: 0, b: 0, a: 0}
-  enemyImage: {fileID: 0}
+  enemyImage: {fileID: 1019819828}
 --- !u!1 &332794673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1151,6 +1151,7 @@ MonoBehaviour:
   - {fileID: 1812777102}
   - {fileID: 1174425313}
   - {fileID: 1033927162}
+  playerButtonsPressed: []
   tophat: {fileID: 1955000436}
   rightTeaCup: {fileID: 1812777098}
   pocketWatch: {fileID: 1033927158}
@@ -2876,6 +2877,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1033927162}
+        m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
+        m_MethodName: AddButtonToPlayerPressedList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1033927159
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3589,7 +3602,6 @@ GameObject:
   - component: {fileID: 1138896252}
   - component: {fileID: 1138896251}
   - component: {fileID: 1138896250}
-  - component: {fileID: 1138896249}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3617,23 +3629,6 @@ RectTransform:
   m_AnchoredPosition: {x: -35, y: -96}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1138896249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138896247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 064922a61e54bb344a1ed1b17790057d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthHeart3: {fileID: 0}
-  healthHeart2: {fileID: 0}
-  healthHeart1: {fileID: 0}
-  selectedColor: {r: 0.17583047, g: 0, b: 0.5529412, a: 0}
-  enemyImage: {fileID: 0}
 --- !u!114 &1138896250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3786,6 +3781,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: bc490dd7b164fbc499c858d7ec9a78e6, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1174425313}
+        m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
+        m_MethodName: AddButtonToPlayerPressedList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5186,6 +5193,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1812777102}
+        m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
+        m_MethodName: AddButtonToPlayerPressedList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1812777099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5456,6 +5475,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 5f2b784515220a8478bb2c94a3a6b2ba, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1955000440}
+        m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
+        m_MethodName: AddButtonToPlayerPressedList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

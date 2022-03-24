@@ -37,4 +37,8 @@ public void SelectButton()
         //sets buttonImage color back to original color
         buttonImage.color = originalColor;
     }
+    public void AddButtonToPlayerPressedList()
+    {
+        AskAliceManager.playerPressedButtons.Add(button);// You already declare the button in your script so im just reusing that variable
+    }
 }

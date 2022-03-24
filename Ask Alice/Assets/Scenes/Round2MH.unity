@@ -733,7 +733,9 @@ MonoBehaviour:
   mainMenu: {fileID: 717224970}
   exitButton: {fileID: 1766006510}
   resume: {fileID: 390673300}
-  restart: {fileID: 0}
+  restartLevel: {fileID: 0}
+  restartGame: {fileID: 0}
+  thisGameSceneName: 
   firstGameSceneName: OpeningScene
   gameSceneName: MainMenu
   PauseMenuOnOff: {fileID: 1677297477}
@@ -1295,6 +1297,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 5f2b784515220a8478bb2c94a3a6b2ba, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 272638188}
+        m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
+        m_MethodName: AddButtonToPlayerPressedList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3238,6 +3252,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 972712937}
+        m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
+        m_MethodName: AddButtonToPlayerPressedList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &972712940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3832,7 +3858,7 @@ MonoBehaviour:
   healthHeart2: {fileID: 2029519504}
   healthHeart1: {fileID: 50115819}
   selectedColor: {r: 0.5529412, g: 0, b: 0, a: 0}
-  enemy: {fileID: 1768271851}
+  enemyImage: {fileID: 1768271851}
 --- !u!1 &1288831838
 GameObject:
   m_ObjectHideFlags: 0
@@ -3950,6 +3976,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: df99fd5d26d17504591009fa8c4ad8e0, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1308569127}
+        m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
+        m_MethodName: AddButtonToPlayerPressedList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4243,7 +4281,6 @@ GameObject:
   - component: {fileID: 1465773445}
   - component: {fileID: 1465773444}
   - component: {fileID: 1465773443}
-  - component: {fileID: 1465773442}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4271,23 +4308,6 @@ RectTransform:
   m_AnchoredPosition: {x: 332.7328, y: 317.75}
   m_SizeDelta: {x: 1042.5001, y: 493.5}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1465773442
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1465773440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 064922a61e54bb344a1ed1b17790057d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthHeart3: {fileID: 0}
-  healthHeart2: {fileID: 0}
-  healthHeart1: {fileID: 0}
-  selectedColor: {r: 0.17583047, g: 0, b: 0.5529412, a: 0}
-  enemy: {fileID: 0}
 --- !u!114 &1465773443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5824,6 +5844,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1850189821}
+        m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
+        m_MethodName: AddButtonToPlayerPressedList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1850189824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6063,6 +6095,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: ff4a7b4b94dc21e4a80ef5a7a84cb43b, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1878715425}
+        m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
+        m_MethodName: AddButtonToPlayerPressedList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

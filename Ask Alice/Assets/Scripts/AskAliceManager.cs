@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Then on your AskAliceObjects script you could have a function similar to something like this:
+ 
+   // In your inspector, click on your button, go to the onClickEvents, add an event, drag your button into the field, select the event -> AskAliceObjects->AddButtonToPlayerPressedList
+   // This will also require you to remove the button.Onclick.Invoke(); from "Select Button" since that
+   // would make the askAliceManager add the buttons to the player's list while the AI was pressing the buttons before the player gets a turn.
+    
 
 public class AskAliceManager : MonoBehaviour
 {
@@ -17,12 +23,14 @@ public class AskAliceManager : MonoBehaviour
 
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
     private  List<Button> GameButtonsPressed = new List<Button>();
-    private List<Button> playerButtonsPressed = new List<Button>();
+   public static List<Button> playerPressedButtons;
+    public List<Button> playerButtonsPressed;
 
     public Button tophat;
     public Button rightTeaCup;
     public Button pocketWatch;
     public Button lockAndKey;
+   // private Button button;
 
     private int numberOfPresses = 3;
     int playerpresses = 0;
@@ -84,20 +92,13 @@ public class AskAliceManager : MonoBehaviour
         //reeneable buttons
         canvas.GetComponent<GraphicRaycaster>().enabled = true;
     }
-    public void AddToList(Button b, int i)
-    { 
-        if(i < GameButtonsPressed.Count)
-        playerButtonsPressed.Add(b);
-    }
+ 
     IEnumerator PlayerPresses()
     {
         for (int i = 0; i < GameButtonsPressed.Count; i++)
         {
-
-          
-            
-      //if( Button.ButtonClickedEvent)
-
+            //calls 
+            Invoke ("AddButtonToPlayerPressedList", time);
 
             //if the player has pressed 4 buttons
             if (playerpresses == numberOfPresses)
@@ -112,10 +113,7 @@ public class AskAliceManager : MonoBehaviour
         //wait 1 second
         yield return new WaitForSeconds(1f);
     }
-    public void addButtonPressed()
-    {
-        
-    }
+   
         public void CheckInput()
         { 
         //check the button pressed by player matches button
@@ -237,6 +235,12 @@ public class AskAliceManager : MonoBehaviour
 
         GameSceneManager.Instance.LoadScene(MainMenu);
     }
+    public void AddToList(Button b, int i)
+    {
+        if (i < GameButtonsPressed.Count)
+            playerButtonsPressed.Add(b);
+    }
+  
 }
 
 

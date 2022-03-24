@@ -22,21 +22,18 @@ public class Enemy : MonoBehaviour
         healthHeart1.SetActive(true);
         enemyImage = GetComponent<Image>();
 
-       // originalColor = enemyImage.color;
+     //originalColor = enemyImage.color;
    
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //must call methods in manager or call manager methods here
-    }
+   
 
     public void HealthToTwo()
     {
         //removes third heart from screen
         healthHeart3.SetActive(false);
+
         //still shows first two hearts
         healthHeart2.SetActive(true);
         healthHeart1.SetActive(true);
