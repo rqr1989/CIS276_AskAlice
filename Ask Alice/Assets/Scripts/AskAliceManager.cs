@@ -26,11 +26,11 @@ public class AskAliceManager : MonoBehaviour
    public static List<Button> playerPressedButtons;
     public List<Button> playerButtonsPressed;
 
-    public Button tophat;
-    public Button rightTeaCup;
-    public Button pocketWatch;
-    public Button lockAndKey;
-   // private Button button;
+//public Button tophat;
+   // public Button rightTeaCup;
+   // public Button pocketWatch;
+ //   public Button lockAndKey;
+
 
     private int numberOfPresses = 3;
     int playerpresses = 0;
@@ -98,8 +98,9 @@ public class AskAliceManager : MonoBehaviour
         for (int i = 0; i < GameButtonsPressed.Count; i++)
         {
             //calls 
-            Invoke ("AddButtonToPlayerPressedList", time);
+            Invoke("AddButtonToPlayerPressedList", time);
 
+        }
             //if the player has pressed 4 buttons
             if (playerpresses == numberOfPresses)
             {
@@ -108,7 +109,7 @@ public class AskAliceManager : MonoBehaviour
                 //disables buttond for player input
                 canvas.GetComponent<GraphicRaycaster>().enabled = false;
             }
-        }
+        
 
         //wait 1 second
         yield return new WaitForSeconds(1f);
@@ -141,6 +142,12 @@ public class AskAliceManager : MonoBehaviour
             {
                 //playerwins is set to false
                 playerwins = false;
+                //calls winCondition
+                winCondition();
+            }
+            else
+            {
+                playerwins = true;
                 //calls winCondition
                 winCondition();
             }
