@@ -27,8 +27,6 @@ public class Enemy : MonoBehaviour
 
     }
 
-   
-
     public void HealthToTwo()
     {
         //removes third heart from screen

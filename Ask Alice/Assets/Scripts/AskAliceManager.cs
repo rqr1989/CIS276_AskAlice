@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Then on your AskAliceObjects script you could have a function similar to something like this:
- 
-   // In your inspector, click on your button, go to the onClickEvents, add an event, drag your button into the field, select the event -> AskAliceObjects->AddButtonToPlayerPressedList
-   // This will also require you to remove the button.Onclick.Invoke(); from "Select Button" since that
-   // would make the askAliceManager add the buttons to the player's list while the AI was pressing the buttons before the player gets a turn.
+
     
 
 public class AskAliceManager : MonoBehaviour
@@ -16,20 +12,17 @@ public class AskAliceManager : MonoBehaviour
     public string gameSceneName;
     public string MainMenu;
     public bool playerwins; //boolean to determine if player won
-
+   
     public int enemyHealth = 3;  //white Rabit Health
    
     public int playerHealth = 3;  //player health
-
+    public static List<Button> playerPressedButtons;
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
-    private  List<Button> GameButtonsPressed = new List<Button>();
-   public static List<Button> playerPressedButtons;
-    public List<Button> playerButtonsPressed;
-
-//public Button tophat;
-   // public Button rightTeaCup;
-   // public Button pocketWatch;
- //   public Button lockAndKey;
+   private  List<Button> GameButtonsPressed = new List<Button>();
+   
+    
+   
+    // public List<Button> playerButtonsPressed;
 
 
     private int numberOfPresses = 3;
@@ -48,10 +41,9 @@ public class AskAliceManager : MonoBehaviour
     {
         //starts PressButtons corutine
         StartCoroutine(PressButtons());
-        //starts playerPresses corutine
-        StartCoroutine(PlayerPresses());
-        //calls CheckInput method
-        CheckInput();
+        //StartCoroutine(PlayerPresses());
+       
+       
     }
 
     IEnumerator PressButtons()
@@ -66,15 +58,24 @@ public class AskAliceManager : MonoBehaviour
         {
             allButtons[i].button.enabled = false;
         }
-        for(int i=0; i<numberOfPresses; i++)
+        //wait 1 second
+        yield return new WaitForSeconds(1f);
+
+        for (int i=0; i<numberOfPresses; i++)
         {
             //select random int within range to select random button
             int randomButton = Random.Range(0, allButtons.Count);
-            
+
             allButtons[randomButton].SelectButton();
-           
+            
+             Invoke("ButtonClickIndicator", time);
+            
+
             //adds randomly selected button to list
             GameButtonsPressed.Add(allButtons[randomButton].button);
+           // GameButtonsPressed[i] 
+
+            Debug.Log(" pressed" + allButtons[randomButton]);
             //wait 1 second
             yield return new WaitForSeconds(1f);
             //deselect button
@@ -91,18 +92,24 @@ public class AskAliceManager : MonoBehaviour
         }
         //reeneable buttons
         canvas.GetComponent<GraphicRaycaster>().enabled = true;
+       
+        //starts playerPresses corutine
+        Coroutine coroutine = StartCoroutine(PlayerPresses());
     }
  
     IEnumerator PlayerPresses()
     {
-        for (int i = 0; i < GameButtonsPressed.Count; i++)
+        //while player button presses are less than the number of presses add 1 and iterate
+        for (int i = 0; i < numberOfPresses; i++)
         {
-            //calls 
-            Invoke("AddButtonToPlayerPressedList", time);
-
+            
+            //calls  AddButtonToPlayerPressedList method from AskAliceObjects script
+            Invoke("AddButtonToPlayerList", time);
+    
+            
         }
             //if the player has pressed 4 buttons
-            if (playerpresses == numberOfPresses)
+            if (playerpresses >= numberOfPresses)
             {
                 //find canvas in scene
                 Canvas canvas = FindObjectOfType<Canvas>();
@@ -113,18 +120,21 @@ public class AskAliceManager : MonoBehaviour
 
         //wait 1 second
         yield return new WaitForSeconds(1f);
+        //starts check input corutine
+        Coroutine coroutine = StartCoroutine(CheckInput());
     }
-   
-        public void CheckInput()
+
+    IEnumerator CheckInput()
         { 
         //check the button pressed by player matches button
         //at equivilent index in GamesButtonsPressed list
       
         //the lists do not have the same number of entries
-            if(GameButtonsPressed.Count != playerButtonsPressed.Count)
+            if(GameButtonsPressed.Count != playerPressedButtons.Count)
         {
             //playerwins is set to false
             playerwins = false;
+            
             //calls winCondition
             winCondition();
         }
@@ -133,12 +143,15 @@ public class AskAliceManager : MonoBehaviour
         {
             //Sort both lists
             GameButtonsPressed.Sort();
-            playerButtonsPressed.Sort();
+            playerPressedButtons.Sort();
+            //wait 1 second
+            yield return new WaitForSeconds(1f);
         }
       //Go through lists and determine if buttons pressed at each index are the same
         for (int i =0; i<GameButtonsPressed.Count; i++)
         {
-            if(playerButtonsPressed[i] != GameButtonsPressed[i])
+            //if the button stored at index i in both lists dont match
+            if(playerPressedButtons[i] != GameButtonsPressed[i])
             {
                 //playerwins is set to false
                 playerwins = false;
@@ -153,9 +166,14 @@ public class AskAliceManager : MonoBehaviour
             }
         }
     }
+    public void AddToList(Button b, int i)
+    {
+        if (i < GameButtonsPressed.Count)
+            playerPressedButtons.Add(b);
+        Debug.Log(" added" + b);
+    }
     //winCondition method checks whether the player has won or lost
-    // if player wins start new round
-    //else player loses 1 health
+    // if player wins start new round  else player loses 1 health
     public void winCondition()
     {
         //if the player wins
@@ -242,11 +260,7 @@ public class AskAliceManager : MonoBehaviour
 
         GameSceneManager.Instance.LoadScene(MainMenu);
     }
-    public void AddToList(Button b, int i)
-    {
-        if (i < GameButtonsPressed.Count)
-            playerButtonsPressed.Add(b);
-    }
+    
   
 }
 

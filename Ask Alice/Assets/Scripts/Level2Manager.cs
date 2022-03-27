@@ -19,7 +19,7 @@ public class Level2Manager : MonoBehaviour
     private List<Button> playerButtonsPressed = new List<Button>();
 
     private int numberOfPresses = 6;
-    private int buttonCheck = 0;
+   
     int playerpresses = 0;
     int currentRound = 1;
     public Button lockAndKey;
