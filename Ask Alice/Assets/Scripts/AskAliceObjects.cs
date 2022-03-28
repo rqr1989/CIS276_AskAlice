@@ -10,8 +10,9 @@ public class AskAliceObjects : MonoBehaviour
     private Color originalColor;
     public Button button;
     private Image buttonImage;
- 
 
+    public AudioClip buttonclip;
+    public float volume = 0.5f;
 
     // Start is called before the first frame update
     private void Awake()
@@ -22,6 +23,9 @@ public class AskAliceObjects : MonoBehaviour
         
         button = GetComponent<Button>();
 
+        buttonSound = GetComponent<AudioSource>();
+
+        buttonclip = GetComponent<AudioClip>();
         //sets original color equal to buttonImage's color
         originalColor = buttonImage.color;
     }
@@ -51,7 +55,8 @@ public void SelectButton()
         //make the button change color and play sound effect when pressed by computer
 
 
-        buttonSound.Play();
+        buttonSound.PlayOneShot(buttonclip, volume);
+      
 
         //sets buttonImage color to selected color
         buttonImage.color = selectedColor;

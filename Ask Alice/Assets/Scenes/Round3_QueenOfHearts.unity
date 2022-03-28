@@ -2620,6 +2620,8 @@ MonoBehaviour:
   buttonSound: {fileID: 495406261}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 495406258}
+  buttonclip: {fileID: 8300000, guid: ace22d56a0189ee45bc53e92b4f84ccb, type: 3}
+  volume: 0.5
 --- !u!1 &531698699
 GameObject:
   m_ObjectHideFlags: 0
@@ -2934,6 +2936,8 @@ MonoBehaviour:
   buttonSound: {fileID: 555811795}
   selectedColor: {r: 0.30900678, g: 0.754717, b: 0.534627, a: 0}
   button: {fileID: 555811796}
+  buttonclip: {fileID: 8300000, guid: ff4a7b4b94dc21e4a80ef5a7a84cb43b, type: 3}
+  volume: 0.5
 --- !u!1 &585838238
 GameObject:
   m_ObjectHideFlags: 0
@@ -3104,6 +3108,8 @@ MonoBehaviour:
   buttonSound: {fileID: 640456985}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 640456984}
+  buttonclip: {fileID: 8300000, guid: fe56fe4eb2b10b947853b1b69eafa48c, type: 3}
+  volume: 0.5
 --- !u!114 &640456984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3977,6 +3983,8 @@ MonoBehaviour:
   buttonSound: {fileID: 803545222}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 803545223}
+  buttonclip: {fileID: 8300000, guid: bc490dd7b164fbc499c858d7ec9a78e6, type: 3}
+  volume: 0.5
 --- !u!1 &871918468
 GameObject:
   m_ObjectHideFlags: 0
@@ -5420,6 +5428,8 @@ MonoBehaviour:
   buttonSound: {fileID: 1541595573}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 1541595570}
+  buttonclip: {fileID: 8300000, guid: a3972663fe0f10f4d86b87fdd5231553, type: 3}
+  volume: 0.5
 --- !u!1 &1553676598
 GameObject:
   m_ObjectHideFlags: 0
@@ -6671,6 +6681,8 @@ MonoBehaviour:
   buttonSound: {fileID: 2116150024}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 2116150021}
+  buttonclip: {fileID: 8300000, guid: 80f3d6a80db38b149ac4ed0d162f3478, type: 3}
+  volume: 0.5
 --- !u!1 &2129909024
 GameObject:
   m_ObjectHideFlags: 0
