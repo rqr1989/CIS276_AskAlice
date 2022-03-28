@@ -32,7 +32,12 @@ public class AskAliceManager : MonoBehaviour
     // Start is called before the first frame update
  public  void Start()
     {
-        
+        //do something like if current scnene equals scene 2  number of presses equals 5,
+        //enemy equals mad hatter, else if scene equals scene 3 number of presses equals 7, enemy equals QueenOfHearts
+
+
+
+
         //calls startRound method
         StartRound();
     }
@@ -68,6 +73,7 @@ public class AskAliceManager : MonoBehaviour
 
             allButtons[randomButton].SelectButton();
             
+         //calls buttonClickIndicator  from AskAlice Objects which plays a one shot sound and changes the color of the pressed button
              Invoke("ButtonClickIndicator", time);
             
 

@@ -1148,8 +1148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: {fileID: 272638189}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 272638190}
+  pressed: {fileID: 272638190}
 --- !u!82 &272638189
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1159,9 +1161,9 @@ AudioSource:
   m_GameObject: {fileID: 272638186}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  OutputAudioMixerGroup: {fileID: 2419218284613172020, guid: 98d3816279d38da44b9982b1d1a95b86, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5f2b784515220a8478bb2c94a3a6b2ba, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1304,7 +1306,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 272638188}
         m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
-        m_MethodName: AddButtonToPlayerPressedList
+        m_MethodName: AddButtonToPlayerList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3098,8 +3100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: {fileID: 972712938}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 972712939}
+  pressed: {fileID: 0}
 --- !u!82 &972712938
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3109,9 +3113,9 @@ AudioSource:
   m_GameObject: {fileID: 972712935}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  OutputAudioMixerGroup: {fileID: 2419218284613172020, guid: 98d3816279d38da44b9982b1d1a95b86, type: 2}
+  m_audioClip: {fileID: 8300000, guid: bc490dd7b164fbc499c858d7ec9a78e6, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -3254,7 +3258,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 972712937}
         m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
-        m_MethodName: AddButtonToPlayerPressedList
+        m_MethodName: AddButtonToPlayerList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3923,8 +3927,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: {fileID: 1308569129}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 1308569128}
+  pressed: {fileID: 0}
 --- !u!114 &1308569128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3983,7 +3989,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1308569127}
         m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
-        m_MethodName: AddButtonToPlayerPressedList
+        m_MethodName: AddButtonToPlayerList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4002,8 +4008,8 @@ AudioSource:
   m_GameObject: {fileID: 1308569126}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2419218284613172020, guid: 98d3816279d38da44b9982b1d1a95b86, type: 2}
+  m_audioClip: {fileID: 8300000, guid: df99fd5d26d17504591009fa8c4ad8e0, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5690,8 +5696,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: {fileID: 1850189822}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 1850189823}
+  pressed: {fileID: 0}
 --- !u!82 &1850189822
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5701,9 +5709,9 @@ AudioSource:
   m_GameObject: {fileID: 1850189819}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  OutputAudioMixerGroup: {fileID: 2419218284613172020, guid: 98d3816279d38da44b9982b1d1a95b86, type: 2}
+  m_audioClip: {fileID: 8300000, guid: fe56fe4eb2b10b947853b1b69eafa48c, type: 3}
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5846,7 +5854,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1850189821}
         m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
-        m_MethodName: AddButtonToPlayerPressedList
+        m_MethodName: AddButtonToPlayerList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5946,8 +5954,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: {fileID: 1878715426}
   selectedColor: {r: 0.30900678, g: 0.754717, b: 0.534627, a: 0}
   button: {fileID: 1878715427}
+  pressed: {fileID: 0}
 --- !u!82 &1878715426
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5957,8 +5967,8 @@ AudioSource:
   m_GameObject: {fileID: 1878715423}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 2419218284613172020, guid: 98d3816279d38da44b9982b1d1a95b86, type: 2}
+  m_audioClip: {fileID: 8300000, guid: ff4a7b4b94dc21e4a80ef5a7a84cb43b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6102,7 +6112,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1878715425}
         m_TargetAssemblyTypeName: AskAliceObjects, Assembly-CSharp
-        m_MethodName: AddButtonToPlayerPressedList
+        m_MethodName: AddButtonToPlayerList
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

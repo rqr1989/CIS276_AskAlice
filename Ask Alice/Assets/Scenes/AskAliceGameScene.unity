@@ -3030,9 +3030,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: {fileID: 1033927161}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 1033927158}
-  pressed: {fileID: 0}
+  pressed: {fileID: 1033927158}
 --- !u!1 &1037161883
 GameObject:
   m_ObjectHideFlags: 0
@@ -3940,9 +3941,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: {fileID: 1174425312}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 1174425309}
-  pressed: {fileID: 0}
+  pressed: {fileID: 1174425309}
 --- !u!1 &1253124145
 GameObject:
   m_ObjectHideFlags: 0
@@ -5348,9 +5350,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: {fileID: 1812777101}
   selectedColor: {r: 0.30900678, g: 0.754717, b: 0.534627, a: 0}
   button: {fileID: 1812777098}
-  pressed: {fileID: 0}
+  pressed: {fileID: 1812777098}
 --- !u!1 &1953024366
 GameObject:
   m_ObjectHideFlags: 0
@@ -5636,9 +5639,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56a329a3266ed084f87335fd6d4e0c4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonSound: {fileID: 1955000439}
   selectedColor: {r: 0.30980393, g: 0.75686276, b: 0.5372549, a: 0}
   button: {fileID: 1955000436}
-  pressed: {fileID: 0}
+  pressed: {fileID: 1955000436}
 --- !u!1 &2046917090
 GameObject:
   m_ObjectHideFlags: 0
