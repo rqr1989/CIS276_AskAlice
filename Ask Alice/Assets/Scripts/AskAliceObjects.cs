@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,13 +31,11 @@ public class AskAliceObjects : MonoBehaviour
         originalColor = buttonImage.color;
     }
 
-
 public void SelectButton()
     {
         //sets buttonImage color to selected color
         buttonImage.color = selectedColor;
 
-  
     }
   
     public void DeselectButton()
@@ -44,26 +43,27 @@ public void SelectButton()
         //sets buttonImage color back to original color
         buttonImage.color = originalColor;
     }
-    public void AddButtonToPlayerList()
+    public void AddButtonToPlayerList(Button button)
     {
        //add pressed button to list
         AskAliceManager.playerPressedButtons.Add(button);// add pressed button to list
         
     }
-    IEnumerator ButtonClickIndicator()
+   public void ButtonClickIndicator()
     {
         //make the button change color and play sound effect when pressed by computer
-
-
         buttonSound.PlayOneShot(buttonclip, volume);
-      
 
         //sets buttonImage color to selected color
         buttonImage.color = selectedColor;
-        //wait 1 second
-        yield return new WaitForSeconds(1f);
+        
 
         //sets buttonImage color back to original color
-        buttonImage.color = originalColor;
-    } 
+      //  buttonImage.color = originalColor;
+    }
+
+    internal static void AddButtonToPlayerList()
+    {
+        throw new NotImplementedException();
+    }
 }

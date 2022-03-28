@@ -14,16 +14,14 @@ public class AskAliceManager : MonoBehaviour
     public bool playerwins; //boolean to determine if player won
    
     public int enemyHealth = 3;  //white Rabit Health
-   
+  //  public GameObject CheckInput;
     public int playerHealth = 3;  //player health
-    public static List<Button> playerPressedButtons;
+    public static List<Button> playerPressedButtons = new List<Button>();
     public List<AskAliceObjects> allButtons = new List<AskAliceObjects>();
    private  List<Button> GameButtonsPressed = new List<Button>();
-   
-    
-   
-    // public List<Button> playerButtonsPressed;
 
+
+    public Button button;
 
     private int numberOfPresses = 3;
     int playerpresses = 0;
@@ -71,11 +69,9 @@ public class AskAliceManager : MonoBehaviour
             //select random int within range to select random button
             int randomButton = Random.Range(0, allButtons.Count);
 
-            allButtons[randomButton].SelectButton();
-            
-         //calls buttonClickIndicator  from AskAlice Objects which plays a one shot sound and changes the color of the pressed button
-             Invoke("ButtonClickIndicator", time);
-            
+            allButtons[randomButton].ButtonClickIndicator();
+           
+
 
             //adds randomly selected button to list
             GameButtonsPressed.Add(allButtons[randomButton].button);
@@ -99,44 +95,32 @@ public class AskAliceManager : MonoBehaviour
         //reeneable buttons
         canvas.GetComponent<GraphicRaycaster>().enabled = true;
        
-        //starts playerPresses corutine
-        Coroutine coroutine = StartCoroutine(PlayerPresses());
+     
     }
  
-    IEnumerator PlayerPresses()
-    {
-        //while player button presses are less than the number of presses add 1 and iterate
-        for (int i = 0; i < numberOfPresses; i++)
+ 
+ public void CheckInput()
         {
-            
-            //calls  AddButtonToPlayerPressedList method from AskAliceObjects script
-            Invoke("AddButtonToPlayerList", time);
-    
-            
-        }
-            //if the player has pressed 4 buttons
-            if (playerpresses >= numberOfPresses)
-            {
-                //find canvas in scene
-                Canvas canvas = FindObjectOfType<Canvas>();
-                //disables buttond for player input
-                canvas.GetComponent<GraphicRaycaster>().enabled = false;
-            }
-        
-
-        //wait 1 second
-        yield return new WaitForSeconds(1f);
-        //starts check input corutine
-        Coroutine coroutine = StartCoroutine(CheckInput());
-    }
-
-    IEnumerator CheckInput()
-        { 
         //check the button pressed by player matches button
         //at equivilent index in GamesButtonsPressed list
-      
+        for (int i = 0; i < numberOfPresses; i++)
+        {
+            AskAliceObjects.AddButtonToPlayerList();
+            //calls  AddButtonToPlayerPressedList method from AskAliceObjects script
+            //  Invoke("AddButtonToPlayerList", time);
+        }
+        //if the player has pressed 4 buttons
+        if (playerpresses >= numberOfPresses)
+        {
+            //find canvas in scene
+            Canvas canvas = FindObjectOfType<Canvas>();
+            //disables buttond for player input
+            canvas.GetComponent<GraphicRaycaster>().enabled = false;
+        }
+
+
         //the lists do not have the same number of entries
-            if(GameButtonsPressed.Count != playerPressedButtons.Count)
+        if (GameButtonsPressed.Count != playerPressedButtons.Count)
         {
             //playerwins is set to false
             playerwins = false;
@@ -150,8 +134,7 @@ public class AskAliceManager : MonoBehaviour
             //Sort both lists
             GameButtonsPressed.Sort();
             playerPressedButtons.Sort();
-            //wait 1 second
-            yield return new WaitForSeconds(1f);
+        
         }
       //Go through lists and determine if buttons pressed at each index are the same
         for (int i =0; i<GameButtonsPressed.Count; i++)

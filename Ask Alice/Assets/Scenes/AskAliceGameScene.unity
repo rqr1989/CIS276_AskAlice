@@ -1151,6 +1151,7 @@ MonoBehaviour:
   - {fileID: 1812777102}
   - {fileID: 1174425313}
   - {fileID: 1033927162}
+  button: {fileID: 0}
   time: 1
 --- !u!4 &364661521
 Transform:
@@ -2620,8 +2621,8 @@ MonoBehaviour:
   mainMenu: {fileID: 2145166797}
   exitButton: {fileID: 1772118550}
   resume: {fileID: 407625253}
-  restartLevel: {fileID: 0}
-  restartGame: {fileID: 0}
+  restartLevel: {fileID: 901231332}
+  restartGame: {fileID: 129534456}
   thisGameSceneName: AskAliceGameScene
   firstGameSceneName: OpeningScene
   gameSceneName: MainMenu
